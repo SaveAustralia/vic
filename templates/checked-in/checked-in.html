@@ -1,0 +1,13 @@
+<div class="checked-in">
+  <div class="content">
+    <div class="details">
+      <h2 ng-bind-html="$ctrl.location | unsafe"></h2>
+      <div class="check-img"></div>
+      <p>Checked in</p>
+      <p class="timestamp ">{{ $ctrl.timestamp }}</p>
+    </div>
+  </div>
+  <div class="btns">
+    <button type="button" class="btn btn-block btn-outline-primary" ng-click="$ctrl.goBack()">Done</button>
+  </div>
+</div>

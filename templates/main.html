@@ -1,0 +1,9 @@
+<div class="main">
+  <div class="form-group">
+    <label for="company">Location</label>
+    <input type="text" name="company" ng-model="$ctrl.location" class="form-control" placeholder="ex. Bunnings">
+  </div>
+  <button type="button" id="check-in" class="btn btn-block btn-primary mb-5" ng-click="$ctrl.checkIn()" ng-disabled="!$ctrl.location">Check-in to this location</button>
+
+  <button type="button" class="btn btn-block btn-outline-primary" ng-repeat="location in $ctrl.locations track by $index" ng-click="$ctrl.setLocation(location)">{{ location | limitTo: 20 }}{{ location.length > 20 ? '...' : '' }}</button>
+</div>
